@@ -1,11 +1,7 @@
-import { chromium } from 'playwright';
+const { test, expect } = require('@playwright/test');
 
-(async () => {
-  const browser = await chromium.launch();
-  const page = await browser.newPage();
-
-  await page.goto('https://example.com');
-  await page.screenshot({ path: 'example.png' });
-
-  await browser.close();
-})();
+test('basic test', async ({ page }) => {
+    await page.goto('https://www.monterail.com/');
+    const title = await page.title();
+    expect(title).toBe('AI-enhanced digital product development · Monterail');
+});
