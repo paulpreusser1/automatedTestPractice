@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { CustomerPage } from './pageObjects/CustomerPage_PO';
+import { CustomerPage } from './PageObjects/CustomerPage_PO';
 
 test.describe('Verify customer login and view transactions from a given range', () => {
 
